@@ -7,6 +7,12 @@ struct User {
     sign_in_count: u64,
 }
 
+// Unit-like structs don't have any fields,
+// but can be used when you want to
+// implement a trait on some type, but
+// don't have data to store in a field
+struct AlwaysEqual;
+
 // An instance of a struct defines concrete
 // values for each of the fields defined above
 fn main() {
@@ -29,6 +35,8 @@ fn main() {
 
     let black = Color(0, 0, 0);
     let origin = Point(0, 0, 0);
+
+    let subject = AlwaysEqual;
 }
 
 fn build_user(email: String, username: String) -> User {
