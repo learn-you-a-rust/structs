@@ -21,6 +21,14 @@ fn main() {
         email: String::from("another@example"),
         ..user1
     };
+
+    // In a tuple struct, the fields don't have
+    // names, just the types are defined
+    struct Color(i32, i32, i32);
+    struct Point(i32, i32, i32);
+
+    let black = Color(0, 0, 0);
+    let origin = Point(0, 0, 0);
 }
 
 fn build_user(email: String, username: String) -> User {
